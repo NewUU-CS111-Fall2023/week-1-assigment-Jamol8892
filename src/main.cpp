@@ -1,22 +1,37 @@
 /*
- * Author:
- * Date:
+ * Author: Jamol
+ * Date: 17.10.2023
  * Name:
  */
 
 #include <iostream>
 #include "task_1.h"
+#include <string>
 
 int main() {
-    std::cout << "Task 1" << std::endl;
-    // call for task 1
-    std::cout << "Task 2" << std::endl;
-    // call for task 2
-    std::cout << "Task 3" << std::endl;
-    // call for task 3
-    std::cout << "Task 4" << std::endl;
-    // call for task 4
-    std::cout << "Task 5" << std::endl;
-    // call for task 5
+    FamilyMembers* brother1 = new Brothers("Ali", 27, "Surveyor at Indorama");
+    FamilyMembers* brother2 = new Brothers("Abdulaziz", 25, "Surveyor assistant at Indorama");
+    FamilyMembers* brother3 = new Brothers("Jamshid", 21, "Civil Engineer");
+
+    brother1 ->display();
+    brother2 ->display();
+    brother3 ->display();
+
+    FamilyMembers* father = new Parents("Komiljon", 50, "Insurance");
+    FamilyMembers* mother = new Parents("Gulsara", 48, "housewife");
+
+    father ->display();
+    mother ->display();
+
+    FamilyMembers* nephew1 = new Nephews("Sa'diya", 2, "lol I even don't know");
+    FamilyMembers* nephew2 = new Nephews("Aziza", 1, "none");
+
+    nephew1 ->display();
+    nephew2 ->display();
+
+    delete nephew1;
+    delete brother2;
+
     return 0;
 }
+
